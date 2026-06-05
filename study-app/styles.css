@@ -123,6 +123,10 @@ code {
   overflow: hidden;
 }
 
+.segmented--4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
 .segmented__btn {
   padding: 10px 10px;
   border: 0;
@@ -266,5 +270,146 @@ input {
   display: flex;
   gap: 10px;
   align-items: center;
+}
+
+.plan {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.planGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.planGrid--3 {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+@media (max-width: 780px) {
+  .planGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.planSection h3 {
+  margin: 0 0 10px;
+  font-size: 15px;
+}
+
+.planHero__title {
+  font-size: 13px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.planHero__focus {
+  font-size: 22px;
+  font-weight: 800;
+  margin: 8px 0;
+}
+
+.planHero__text {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.planCard {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 12px;
+  box-shadow: 0 10px 30px var(--shadow);
+}
+
+.planCard__top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.planCard__prio {
+  font-weight: 800;
+  color: var(--accent);
+}
+
+.planCard__meta {
+  font-size: 12px;
+  color: var(--muted);
+  margin: 8px 0 10px;
+}
+
+.progressBar {
+  height: 8px;
+  background: color-mix(in srgb, var(--border) 60%, transparent);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progressBar__fill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 999px;
+  transition: width 0.3s ease;
+}
+
+.checkRow {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+}
+
+.checkRow:last-child {
+  border-bottom: 0;
+}
+
+.checkRow input {
+  width: auto;
+  margin-top: 4px;
+}
+
+.planError {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  line-height: 1.5;
+}
+
+.planError:last-child {
+  border-bottom: 0;
+}
+
+.planError__top {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.planTips ol {
+  margin: 0;
+  padding-left: 20px;
+  line-height: 1.7;
+}
+
+.planTips li + li {
+  margin-top: 8px;
+}
+
+ruby {
+  ruby-position: over;
+}
+
+rt {
+  font-size: 0.65em;
+  color: var(--muted);
 }
 

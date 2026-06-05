@@ -10,7 +10,7 @@
     <header class="header">
       <div class="title">
         <div class="title__main">鉄骨製作管理技術者 1級</div>
-        <div class="title__sub">Search ・ Quiz ・ Flashcards</div>
+        <div class="title__sub">Study Plan ・ Quiz ・ Vocab ・ Search</div>
       </div>
       <div class="header__right">
         <span id="status" class="status">Loading…</span>
@@ -21,10 +21,11 @@
       <aside class="sidebar">
         <div class="card">
           <div class="card__title">Mode</div>
-          <div class="segmented">
-            <button id="modeSearch" class="segmented__btn is-active" type="button">Search</button>
+          <div class="segmented segmented--4">
+            <button id="modePlan" class="segmented__btn is-active" type="button">Plan</button>
             <button id="modeQuiz" class="segmented__btn" type="button">Quiz</button>
             <button id="modeVocab" class="segmented__btn" type="button">Vocab</button>
+            <button id="modeSearch" class="segmented__btn" type="button">Search</button>
           </div>
         </div>
 
@@ -67,7 +68,12 @@
       </aside>
 
       <section class="content">
-        <div id="viewSearch" class="view is-active">
+        <div id="viewPlan" class="view is-active">
+          <div class="view__title">လေ့လာရန်အစီအစဉ် / Study Plan</div>
+          <div id="plan" class="plan"></div>
+        </div>
+
+        <div id="viewSearch" class="view">
           <div class="view__title">Search results</div>
           <div id="results" class="results"></div>
         </div>
