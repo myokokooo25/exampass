@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>鉄骨製作管理技術者 — Study</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="title">
+        <div class="title__main">鉄骨製作管理技術者 1級</div>
+        <div class="title__sub">Search ・ Quiz ・ Flashcards</div>
+      </div>
+      <div class="header__right">
+        <span id="status" class="status">Loading…</span>
+      </div>
+    </header>
+
+    <main class="layout">
+      <aside class="sidebar">
+        <div class="card">
+          <div class="card__title">Mode</div>
+          <div class="segmented">
+            <button id="modeSearch" class="segmented__btn is-active" type="button">Search</button>
+            <button id="modeQuiz" class="segmented__btn" type="button">Quiz</button>
+            <button id="modeVocab" class="segmented__btn" type="button">Vocab</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__title">Filter</div>
+          <label class="field">
+            <div class="field__label">Category</div>
+            <select id="category">
+              <option value="all">All</option>
+              <option value="1">1 鉄骨構造</option>
+              <option value="2">2 鉄骨加工</option>
+              <option value="3">3 品質管理</option>
+              <option value="4">4 安全衛生</option>
+              <option value="5">5 建築法規</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <div class="field__label">Text query</div>
+            <input id="query" type="search" placeholder="JP / Myanmar…" />
+          </label>
+
+          <div class="row">
+            <button id="btnSearch" class="btn" type="button">Search</button>
+            <button id="btnReset" class="btn btn--ghost" type="button">Reset</button>
+          </div>
+
+          <div class="hint">
+            Data source: <code>data/questions.json</code> &amp; <code>data/flashcards.json</code>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__title">Progress</div>
+          <div class="row">
+            <button id="btnClearProgress" class="btn btn--danger" type="button">Clear progress</button>
+          </div>
+          <div class="hint">Stored locally in your browser (localStorage).</div>
+        </div>
+      </aside>
+
+      <section class="content">
+        <div id="viewSearch" class="view is-active">
+          <div class="view__title">Search results</div>
+          <div id="results" class="results"></div>
+        </div>
+
+        <div id="viewQuiz" class="view">
+          <div class="view__title">Quiz</div>
+          <div class="quiz">
+            <div class="row">
+              <button id="btnPrev" class="btn btn--ghost" type="button">Prev</button>
+              <button id="btnNext" class="btn" type="button">Next</button>
+              <button id="btnShuffle" class="btn btn--ghost" type="button">Shuffle</button>
+            </div>
+            <div id="quizCard" class="quizCard"></div>
+          </div>
+        </div>
+
+        <div id="viewVocab" class="view">
+          <div class="view__title">Vocabulary</div>
+          <div id="vocab" class="results"></div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
+

@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/", "destination": "/study-app/index.html" },
+    { "source": "/study-app", "destination": "/study-app/index.html" }
+  ]
+}

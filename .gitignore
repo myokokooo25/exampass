@@ -1,0 +1,23 @@
+# Large scanned PDFs (keep locally)
+original/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Secrets
+.env
+.env.*
+
+# OCR raw output (optional, large)
+notes/ocr_raw/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Vercel
+.vercel
